@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArcTan - Project Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="pro-details.css" />
+  </head>
+  <body>
+    <div class="railway-layout">
+      <div class="canvas-bg"></div>
+      <div class="canvas-node-layer">
+        <div class="service-node">
+          <div class="node-handle top"></div>
+          <div class="node-content">
+            <div class="node-header">
+              <div class="node-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M15.8 2.3c-7.8 0-7.3 3.4-7.3 3.4l.01 3.5h7.4v1.1H4.9s-5 0-5 7.9c0 7.9 4.3 7.6 4.3 7.6h2.6v-3.7s-.1-4.4 4.3-4.4h7.4s4.1 0 4.1-4v-7.6s.1-3.8-6.8-3.8zm-4 2.3a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z" fill="#3776AB" />
+                  <path d="M16.2 30.7c7.8 0 7.3-3.4 7.3-3.4l-.01-3.5h-7.4v-1.1h10.9s5 0 5-7.9c0-7.9-4.3-7.6-4.3-7.6h-2.6v3.7s.1 4.4-4.3 4.4h-7.4s-4.1 0-4.1 4v7.6s-.1 3.8 6.9 3.8zm4-2.3a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6z" fill="#FFD43B" />
+                </svg>
+              </div>
+              <div class="node-info">
+                <p class="node-title">ArcTan</p>
+                <p class="node-subtitle">5 Python files • 0.01 MB</p>
+              </div>
+            </div>
+            <div class="node-footer">
+              <div class="status-pill">
+                <div class="status-dot"></div>
+                <span class="status-text">Analysis Complete</span>
+              </div>
+            </div>
+          </div>
+          <div class="node-handle bottom"></div>
+        </div>
+      </div>
+      <div class="metro-pane-wrapper">
+        <div class="metro-pane">
+          <div class="pane-header">
+            <div class="header-top">
+              <div class="header-left">
+                <div class="pane-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+                <h1 class="pane-title">ArcTan</h1>
+              </div>
+              <button class="close-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="pane-tabs">
+              <a href="#overview" class="tab-item active" data-tab="overview">Overview</a>
+              <a href="#issues" class="tab-item" data-tab="issues">Issues</a>
+              <a href="#structure" class="tab-item" data-tab="structure">Structure</a>
+              <a href="#quality" class="tab-item" data-tab="quality">Quality Metrics</a>
+              <a href="#dependencies" class="tab-item" data-tab="dependencies">Dependencies</a>
+            </div>
+          </div>
+          <div class="pane-content">
+            <!-- OVERVIEW TAB -->
+            <div id="tab-overview" class="tab-content active">
+              <div class="content-wrapper">
+                <!-- Security Score Card -->
+                <div class="railway-card security-card">
+                  <div class="card-row">
+                    <div class="score-group">
+                      <div class="score-ring-wrapper">
+                        <svg class="score-ring" width="64" height="64">
+                          <circle class="ring-track" cx="32" cy="32" r="28"></circle>
+                          <circle class="ring-fill" cx="32" cy="32" r="28"></circle>
+                        </svg>
+                        <span class="score-val">98</span>
+                      </div>
+                      <div class="score-meta">
+                        <div class="meta-title">Low Risk</div>
+                        <div class="meta-sub">Score A</div>
+                      </div>
+                    </div>
+                    <div class="stats-group">
+                      <div class="stat-row">
+                        <span class="stat-label">Critical</span>
+                        <div class="stat-bar"><div class="stat-fill critical" style="width: 0%"></div></div>
+                        <span class="stat-num">0</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Warning</span>
+                        <div class="stat-bar"><div class="stat-fill warning" style="width: 0%"></div></div>
+                        <span class="stat-num">0</span>
+                      </div>
+                      <div class="stat-row">
+                        <span class="stat-label">Info</span>
+                        <div class="stat-bar"><div class="stat-fill" style="width: 5%; background: #3b82f6;"></div></div>
+                        <span class="stat-num">1</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quick Summary -->
+                <div class="railway-card" style="padding: 20px;">
+                  <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Analysis Summary</h3>
+                  <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-app); border-radius: 6px;">
+                      <span style="color: var(--text-dim); font-size: 14px;">Lines of Code</span>
+                      <span style="color: var(--text-main); font-weight: 600; font-size: 14px;">~1,247</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-app); border-radius: 6px;">
+                      <span style="color: var(--text-dim); font-size: 14px;">Code Quality</span>
+                      <span style="color: var(--success); font-weight: 600; font-size: 14px;">Excellent</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-app); border-radius: 6px;">
+                      <span style="color: var(--text-dim); font-size: 14px;">Maintainability Index</span>
+                      <span style="color: var(--success); font-weight: 600; font-size: 14px;">92/100</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-app); border-radius: 6px;">
+                      <span style="color: var(--text-dim); font-size: 14px;">Test Coverage</span>
+                      <span style="color: var(--warn); font-weight: 600; font-size: 14px;">0%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Statistics -->
+                <div class="railway-card" style="padding: 20px;">
+                  <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Project Statistics</h3>
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px;">
+                    <div><div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Total Files</div><div style="font-size: 20px; font-weight: 700;">7</div></div>
+                    <div><div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Python Files</div><div style="font-size: 20px; font-weight: 700;">5</div></div>
+                    <div><div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Directories</div><div style="font-size: 20px; font-weight: 700;">4</div></div>
+                    <div><div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Size</div><div style="font-size: 20px; font-weight: 700;">0.01 MB</div></div>
+                    <div><div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Complexity</div><div style="font-size: 20px; font-weight: 700;">Simple</div></div>
+                    <div><div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Dependencies</div><div style="font-size: 20px; font-weight: 700; color: var(--success);">Found</div></div>
+                  </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="railway-card" style="padding: 20px;">
+                  <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Top Recommendations</h3>
+                  <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; gap: 12px; align-items: start;">
+                      <div style="width: 6px; height: 6px; background: var(--crit); border-radius: 50%; margin-top: 6px; flex-shrink: 0;"></div>
+                      <div style="font-size: 13px; line-height: 1.6;">
+                        <strong style="color: var(--text-main);">Implement test coverage:</strong>
+                        <span style="color: var(--text-dim);"> Add unit tests for your 5 Python modules using pytest or unittest</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 12px; align-items: start;">
+                      <div style="width: 6px; height: 6px; background: var(--warn); border-radius: 50%; margin-top: 6px; flex-shrink: 0;"></div>
+                      <div style="font-size: 13px; line-height: 1.6;">
+                        <strong style="color: var(--text-main);">Add documentation:</strong>
+                        <span style="color: var(--text-dim);"> Include a README.md with setup and usage instructions</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ISSUES TAB -->
+            <div id="tab-issues" class="tab-content">
+              <div class="content-wrapper">
+                <div class="railway-card" style="padding: 20px; margin-bottom: 16px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h3 style="font-size: 16px; font-weight: 600; color: var(--text-main);">All Issues</h3>
+                    <div style="display: flex; gap: 8px;">
+                      <button class="btn-action" style="background: var(--border);">Filter</button>
+                      <button class="btn-action">Export</button>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <div style="padding: 8px 16px; background: var(--crit); background: rgba(239, 68, 68, 0.1); border-radius: 6px; font-size: 13px;">
+                      <span style="color: var(--crit); font-weight: 600;">0</span> <span style="color: var(--text-dim);">Critical</span>
+                    </div>
+                    <div style="padding: 8px 16px; background: rgba(245, 158, 11, 0.1); border-radius: 6px; font-size: 13px;">
+                      <span style="color: var(--warn); font-weight: 600;">0</span> <span style="color: var(--text-dim);">Warnings</span>
+                    </div>
+                    <div style="padding: 8px 16px; background: rgba(59, 130, 246, 0.1); border-radius: 6px; font-size: 13px;">
+                      <span style="color: #3b82f6; font-weight: 600;">1</span> <span style="color: var(--text-dim);">Info</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-section">
+                  <div class="section-header">
+                    <div class="section-toggle">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+                      <span class="section-title">Analysis Results (1)</span>
+                    </div>
+                  </div>
+                  <div class="section-list" id="issues-list">
+                    <!-- Issues will be dynamically loaded here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STRUCTURE TAB -->
+            <div id="tab-structure" class="tab-content">
+              <div class="content-wrapper">
+                <div class="railway-card" style="padding: 20px; margin-bottom: 16px;">
+                  <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--text-main);">Project Structure</h3>
+                  <p style="font-size: 13px; color: var(--text-dim); line-height: 1.6;">Explore the file organization and architecture of your codebase.</p>
+                </div>
+
+                <div class="railway-card" style="padding: 20px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">File Tree</h4>
+                  <div id="file-tree" style="font-family: monospace; font-size: 13px; line-height: 1.8;">
+                    <!-- File tree will be dynamically loaded here -->
+                  </div>
+                </div>
+
+                <div class="railway-card" style="padding: 20px; margin-top: 16px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">File Distribution</h4>
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    <div style="padding: 16px; background: var(--bg-app); border-radius: 8px;">
+                      <div style="font-size: 12px; color: var(--text-dim); margin-bottom: 8px;">Python Files</div>
+                      <div style="font-size: 24px; font-weight: 700; color: #3776AB;">5</div>
+                      <div style="margin-top: 8px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;">
+                        <div style="height: 100%; width: 71%; background: #3776AB;"></div>
+                      </div>
+                    </div>
+                    <div style="padding: 16px; background: var(--bg-app); border-radius: 8px;">
+                      <div style="font-size: 12px; color: var(--text-dim); margin-bottom: 8px;">Config Files</div>
+                      <div style="font-size: 24px; font-weight: 700; color: #f59e0b;">2</div>
+                      <div style="margin-top: 8px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;">
+                        <div style="height: 100%; width: 29%; background: #f59e0b;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUALITY METRICS TAB -->
+            <div id="tab-quality" class="tab-content">
+              <div class="content-wrapper">
+                <div class="railway-card" style="padding: 20px; margin-bottom: 16px;">
+                  <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--text-main);">Code Quality Metrics</h3>
+                  <p style="font-size: 13px; color: var(--text-dim); line-height: 1.6;">Comprehensive analysis of code maintainability, complexity, and best practices.</p>
+                </div>
+
+                <!-- Maintainability Index -->
+                <div class="railway-card" style="padding: 20px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Maintainability Index</h4>
+                  <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 20px;">
+                    <div class="score-ring-wrapper">
+                      <svg class="score-ring" width="80" height="80">
+                        <circle class="ring-track" cx="40" cy="40" r="35" style="stroke-width: 8;"></circle>
+                        <circle class="ring-fill" cx="40" cy="40" r="35" style="stroke: var(--success); stroke-width: 8; stroke-dasharray: 220; stroke-dashoffset: 18;"></circle>
+                      </svg>
+                      <span class="score-val" style="font-size: 24px;">92</span>
+                    </div>
+                    <div>
+                      <div style="font-size: 18px; font-weight: 700; color: var(--success); margin-bottom: 4px;">Excellent</div>
+                      <div style="font-size: 13px; color: var(--text-dim); line-height: 1.6;">Your code is highly maintainable with clear structure and good documentation practices.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Complexity Analysis -->
+                <div class="railway-card" style="padding: 20px; margin-top: 16px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Cyclomatic Complexity</h4>
+                  <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--bg-app); border-radius: 6px;">
+                      <div>
+                        <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Average Complexity</div>
+                        <div style="font-size: 12px; color: var(--text-dim);">Per function</div>
+                      </div>
+                      <div style="font-size: 24px; font-weight: 700; color: var(--success);">3.2</div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--bg-app); border-radius: 6px;">
+                      <div>
+                        <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Max Complexity</div>
+                        <div style="font-size: 12px; color: var(--text-dim);">Highest function</div>
+                      </div>
+                      <div style="font-size: 24px; font-weight: 700; color: var(--warn);">8</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Code Smells -->
+                <div class="railway-card" style="padding: 20px; margin-top: 16px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Code Smells Detection</h4>
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                    <div style="padding: 16px; background: var(--bg-app); border-radius: 8px; border-left: 3px solid var(--success);">
+                      <div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Long Methods</div>
+                      <div style="font-size: 20px; font-weight: 700;">0</div>
+                    </div>
+                    <div style="padding: 16px; background: var(--bg-app); border-radius: 8px; border-left: 3px solid var(--success);">
+                      <div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Duplicate Code</div>
+                      <div style="font-size: 20px; font-weight: 700;">0%</div>
+                    </div>
+                    <div style="padding: 16px; background: var(--bg-app); border-radius: 8px; border-left: 3px solid var(--warn);">
+                      <div style="font-size: 12px; color: var(--text-dim); margin-bottom: 4px;">Long Parameter Lists</div>
+                      <div style="font-size: 20px; font-weight: 700;">90</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Documentation Coverage -->
+                <div class="railway-card" style="padding: 20px; margin-top: 16px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Documentation Coverage</h4>
+                  <div style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                      <span style="font-size: 13px; color: var(--text-dim);">Functions documented</span>
+                      <span style="font-size: 13px; font-weight: 600;">85%</span>
+                    </div>
+                    <div style="height: 8px; background: var(--border); border-radius: 4px; overflow: hidden;">
+                      <div style="height: 100%; width: 85%; background: var(--success); border-radius: 4px;"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                      <span style="font-size: 13px; color: var(--text-dim);">Classes documented</span>
+                      <span style="font-size: 13px; font-weight: 600;">100%</span>
+                    </div>
+                    <div style="height: 8px; background: var(--border); border-radius: 4px; overflow: hidden;">
+                      <div style="height: 100%; width: 100%; background: var(--success); border-radius: 4px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DEPENDENCIES TAB -->
+            <div id="tab-dependencies" class="tab-content">
+              <div class="content-wrapper">
+                <div class="railway-card" style="padding: 20px; margin-bottom: 16px;">
+                  <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--text-main);">Dependencies Analysis</h3>
+                  <p style="font-size: 13px; color: var(--text-dim); line-height: 1.6;">Overview of project dependencies, versions, and security vulnerabilities.</p>
+                </div>
+
+                <div class="railway-card" style="padding: 20px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h4 style="font-size: 14px; font-weight: 600; color: var(--text-main);">Detected Dependencies</h4>
+                    <div style="padding: 6px 12px; background: var(--success); background: rgba(34, 197, 94, 0.1); border-radius: 6px; font-size: 12px; color: var(--success); font-weight: 600;">All Up to Date</div>
+                  </div>
+                  <div id="dependencies-list" style="display: flex; flex-direction: column; gap: 8px;">
+                    <!-- Dependencies will be dynamically loaded here -->
+                  </div>
+                </div>
+
+                <div class="railway-card" style="padding: 20px; margin-top: 16px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Security Vulnerabilities</h4>
+                  <div style="text-align: center; padding: 40px 20px;">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" style="margin: 0 auto 16px;">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <div style="font-size: 16px; font-weight: 600; color: var(--success); margin-bottom: 8px;">No Known Vulnerabilities</div>
+                    <div style="font-size: 13px; color: var(--text-dim);">All dependencies are secure and up to date</div>
+                  </div>
+                </div>
+
+                <div class="railway-card" style="padding: 20px; margin-top: 16px;">
+                  <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--text-main);">Dependency Graph</h4>
+                  <div style="text-align: center; padding: 20px; color: var(--text-dim); font-size: 13px;">
+                    Dependency visualization coming soon
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="pro-details.js"></script>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArcTan - Python Code Analysis</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@600&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <div class="canvas-bg"></div>
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <h1 class="logo">
+            <div class="logo-icon">A</div>
+            ArcTan
+          </h1>
+          <nav class="nav">
+            <a href="#" class="nav-link">Docs</a>
+            <a href="#" class="nav-link">Playground</a>
+            <a href="#" class="nav-link nav-link-cta">Resources</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="upload-container">
+          <div class="hero-content">
+            <div class="upload-header">
+              <h2 class="upload-title">Analyze Projects</h2>
+              <p class="upload-subtitle">
+                IBM Powered Code Review As A Service (CRAAS) 
+                <br>
+                <br>
+                Upload your python based project and get instant security and code
+                quality analysis upon review and analysis.
+              </p>
+            </div>
+
+            <div class="features-list">
+              <div class="feature-item">
+                <span class="feature-dot"></span>
+                <span class="feature-text">Security Analysis</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-dot"></span>
+                <span class="feature-text">Code Quality</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-dot"></span>
+                <span class="feature-text">Instant Results</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-dot"></span>
+                <span class="feature-text">Detailed Reports</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Upload Form + Progress -->
+          <div class="upload-content">
+            <div class="upload-card">
+              <div class="upload-zone" id="uploadZone">
+                <div class="upload-icon">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                </div>
+                <p class="upload-text">
+                  Drag and Drop files here or
+                  <span class="upload-browse">choose file</span>
+                </p>
+                <input type="file" id="fileInput" accept=".zip" hidden />
+              </div>
+              <div class="upload-footer">
+                <span>Files Supported: ZIP</span>
+                <span>Maximum size: 500 MB</span>
+              </div>
+
+              <button class="btn-primary" id="analyzeBtn" disabled>
+                <span class="btn-text">Analyze Project</span>
+                <svg
+                  class="btn-arrow"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <div class="progress-card" id="progressCard">
+              <div class="progress-content" id="progressContent">
+                <div class="idle-state">Upload a project to begin analysis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-section">
+          <div class="section-header">
+            <h3 class="section-title">Recent Scans</h3>
+          </div>
+
+          <div class="project-grid">
+            <!-- 3 projects were hardcoded for design -->
+            <!-- Project 1 -->
+            <div class="project-card">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg
+                    class="project-icon python-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.03v-2.867s-.109-3.42 3.35-3.42h5.766s3.24.052 3.24-3.148V3.202S18.28 0 11.914 0zm-3.15 1.822a1.023 1.023 0 1 1 0 2.046 1.023 1.023 0 0 1 0-2.046z"
+                      fill="#3776AB"
+                    />
+                    <path
+                      d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752h-5.814v-.826h8.121s3.9.445 3.9-5.735c0-6.18-3.403-5.96-3.403-5.96h-2.03v2.867s.109 3.42-3.35 3.42h-5.766s-3.24-.052-3.24 3.148v5.292S5.72 24 12.086 24zm3.15-1.822a1.023 1.023 0 1 1 0-2.046 1.023 1.023 0 0 1 0 2.046z"
+                      fill="#FFD43B"
+                    />
+                  </svg>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">demo-fastapi-project</h4>
+                  <p class="project-meta">2 hours ago • 12 files • 2.3 MB</p>
+                </div>
+                <div class="project-grade">F</div>
+              </div>
+
+              <div class="project-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">●</span>
+                  <span class="stat-label">15 Critical</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">●</span>
+                  <span class="stat-label">25 Warnings</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn-secondary">View Report</button>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg
+                    class="project-icon python-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.03v-2.867s-.109-3.42 3.35-3.42h5.766s3.24.052 3.24-3.148V3.202S18.28 0 11.914 0zm-3.15 1.822a1.023 1.023 0 1 1 0 2.046 1.023 1.023 0 0 1 0-2.046z"
+                      fill="#3776AB"
+                    />
+                    <path
+                      d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752h-5.814v-.826h8.121s3.9.445 3.9-5.735c0-6.18-3.403-5.96-3.403-5.96h-2.03v2.867s.109 3.42-3.35 3.42h-5.766s-3.24-.052-3.24 3.148v5.292S5.72 24 12.086 24zm3.15-1.822a1.023 1.023 0 1 1 0-2.046 1.023 1.023 0 0 1 0 2.046z"
+                      fill="#FFD43B"
+                    />
+                  </svg>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">ml-pipeline-analysis</h4>
+                  <p class="project-meta">1 day ago • 28 files • 8.7 MB</p>
+                </div>
+                <div class="project-grade">B</div>
+              </div>
+
+              <div class="project-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">●</span>
+                  <span class="stat-label">8 Warnings</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-icon">●</span>
+                  <span class="stat-label">12 Info</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn-secondary">View Report</button>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg
+                    class="project-icon python-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.03v-2.867s-.109-3.42 3.35-3.42h5.766s3.24.052 3.24-3.148V3.202S18.28 0 11.914 0zm-3.15 1.822a1.023 1.023 0 1 1 0 2.046 1.023 1.023 0 0 1 0-2.046z"
+                      fill="#3776AB"
+                    />
+                    <path
+                      d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752h-5.814v-.826h8.121s3.9.445 3.9-5.735c0-6.18-3.403-5.96-3.403-5.96h-2.03v2.867s.109 3.42-3.35 3.42h-5.766s-3.24-.052-3.24 3.148v5.292S5.72 24 12.086 24zm3.15-1.822a1.023 1.023 0 1 1 0-2.046 1.023 1.023 0 0 1 0 2.046z"
+                      fill="#FFD43B"
+                    />
+                  </svg>
+                </div>
+                <div class="project-info">
+                  <h4 class="project-name">flask-todo-api</h4>
+                  <p class="project-meta">3 days ago • 8 files • 1.2 MB</p>
+                </div>
+                <div class="project-grade">A</div>
+              </div>
+
+              <div class="project-stats">
+                <div class="stat-item">
+                  <span class="stat-icon">✓</span>
+                  <span class="stat-label">No issues found</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn-secondary">View Report</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
