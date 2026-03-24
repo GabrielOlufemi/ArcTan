@@ -4,8 +4,11 @@ venv/
 env/
 
 # Environment variables
+# Environment variables
 .env
-.env.*
+.env.local
+.env.production
+.env.development
 
 # Python cache
 __pycache__/
